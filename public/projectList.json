@@ -1,0 +1,22 @@
+[
+  {
+    "name": "計算機",
+    "cover": "@/assets/img/projects/calculator.png"
+  },
+  {
+    "name": "大美人",
+    "cover": "@/assets/img/projects/calculator.png"
+  },
+  {
+    "name": "愛笑白",
+    "cover": "@/assets/img/projects/calculator.png"
+  },
+  {
+    "name": "乖乖女",
+    "cover": "@/assets/img/projects/calculator.png"
+  },
+  {
+    "name": "搗蛋鬼",
+    "cover": "@/assets/img/projects/calculator.png"
+  }
+]
