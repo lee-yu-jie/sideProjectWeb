@@ -12,10 +12,12 @@
         <div class="title">
           <h2>{{item.name}}</h2>
         </div>
-        <div class="card cover cover1">
-          <img :src="item.cover"   alt="">
-        </div>
-        <div class="card back back1">
+        <div class="content">
+          <div class="card cover">
+          <img :src="item.cover"  :alt="item.name">
+          </div>
+          <div class="card back">
+          </div>
         </div>
       </div>
     </section>
@@ -56,7 +58,6 @@ export default{
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Freehand&family=Fuzzy+Bubbles&family=Pacifico&family=Varela+Round&display=swap');
 body {
-  color: #2c3e50;
   background-image: url("~@/assets/img/back2.jpeg");
   background-size: cover;
 }
@@ -74,10 +75,14 @@ body {
     }
     p{
       line-height: 1.5em;
-      font-size: 1.1em;
+      font-size: 1.3em;
+      color: transparent;
+      font-weight: 800;
+      color:transparent;
+      -webkit-text-stroke: 1px rgb(145, 145, 145);
       span{
         display: inline-block;
-        animation: blink .4s ease-in-out ;
+        animation: blink 5s ease-in-out infinite 1s;
         animation-delay: var(--delay);
       }
     }
@@ -86,17 +91,17 @@ body {
     .project{
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-around;
       .projectCard{
-        width: 300px;
-        position: relative;
-        margin-right: 20px;
+        margin-right: 1.2em;
+        margin-bottom: 2em;
         .title{
-          background: linear-gradient(45deg, #ce921a 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #daa233 90% 100%);
           width:fit-content;
           border-radius: 1em;
           overflow: hidden;
           margin: 0 auto 1em;
           box-shadow: 10px 10px 10px rgb(131, 131, 131);
+          animation: shine .8s ease-in infinite;
           h2{
             color: #294d70;
             font-size: 1.5em;
@@ -110,14 +115,20 @@ body {
             text-shadow: rgba(255,255,255,0.5) 0px 3px 3px;
           }
         }
-        .card{
-        box-shadow: 10px 10px 10px rgb(97, 97, 97);
-        border: #DAAF08 5px solid;
-        border-style: ridge;
-        }
-        .cover, .back{
+        .content{
+          position: relative;
           width: 300px;
+          position: relative;
           height: 350px;
+        }
+        .card{
+          box-shadow: 10px 10px 10px rgb(97, 97, 97);
+          border: #DAAF08 5px solid;
+          border-style: ridge;
+          top:0;
+          bottom: 0;
+          left: 0;
+          right: 0;
           position: absolute;
           backface-visibility: hidden;
           transition: 1s ease;
@@ -134,8 +145,6 @@ body {
         }
         .back{
           transform: rotateY(-180deg);
-        }
-        .back1{
           background: linear-gradient(152deg, rgb(1, 51, 141), rgb(0, 13, 43));
         }
         &:hover .cover{
@@ -154,7 +163,24 @@ body {
     color: inherit;
   }
   50% {
-    color: yellow;
+    color: rgb(109, 109, 109);
+  }
+}
+@keyframes shine {
+  0% ,100%{
+    background: linear-gradient(45deg, #daa223 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #daa233  100%);
+  }
+  20%{
+    background: linear-gradient(45deg, #daa223 0%, #daa223 45%, #DAAF08 70%, #FEE9A0 85%, #DAAF08 100%);
+  }
+  40%{
+    background: linear-gradient(45deg, #DAAF08 0%, #daa223 45%, #daa223 70%, #DAAF08 85%, #FEE9A0 100%);
+  }
+  60%{
+    background: linear-gradient(45deg, #FEE9A0 0%, #DAAF08 45%, #daa223  70%, #daa223 85%, #DAAF08 100%);
+  }
+  80%{
+    background: linear-gradient(45deg, #DAAF08 0%, #FEE9A0 45%, #DAAF08 70%, #daa223  85%, #daa223 100%);
   }
 }
 </style>
