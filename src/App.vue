@@ -8,12 +8,12 @@
   </header>
   <main>
     <section class="project">
-      <div class="projectCard">
+      <div v-for="item in projectList.data" :key="item.name" class="projectCard">
         <div class="title">
-          <h2>Vue-計算機</h2>
+          <h2>{{item.name}}</h2>
         </div>
         <div class="card cover cover1">
-          <img src="@/assets/img/projects/calculator.png" alt="">
+          <img :src="item.cover"   alt="">
         </div>
         <div class="card back back1">
         </div>
@@ -23,15 +23,18 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, reactive } from 'vue'
 export default{
   setup(){
     const textSpin = ref(null)
+    const projectList = reactive({data: {}})
     const fetchData = () => {
       fetch('data/projectList.json')
       .then(d => d.json())
       .then(res => {
-        console.log(res);
+        
+        projectList.data = res
+        console.log(projectList);
       });
     }
     onMounted(() => {
@@ -43,6 +46,7 @@ export default{
     })
     return{
       textSpin,
+      projectList
     }
   }
 }
@@ -80,9 +84,12 @@ body {
   }
   main{
     .project{
+      display: flex;
+      flex-wrap: wrap;
       .projectCard{
         width: 300px;
         position: relative;
+        margin-right: 20px;
         .title{
           background: linear-gradient(45deg, #ce921a 0%, #DAAF08 45%, #FEE9A0 70%, #DAAF08 85%, #daa233 90% 100%);
           width:fit-content;
