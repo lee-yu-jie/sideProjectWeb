@@ -2,8 +2,9 @@
   <header>
     <div class="header">
       <h1>Yu Jie</h1>
-      <p ref='textSpin'>存放著我的小作品</p>
-      <p ref='textSpin'>每張卡的背面皆有說明</p>
+      <!-- 這裡改用 v-bind 綁定 ref -->
+      <p :ref='setTextSpin'>存放著我的小作品</p>
+      <p :ref='setTextSpin'>每張卡的背面皆有說明</p>
     </div>
   </header>
   <main>
@@ -28,7 +29,14 @@
 import { onMounted, ref, reactive } from 'vue'
 export default{
   setup(){
-    const textSpin = ref(null)
+
+    // const textSpin = ref(null);
+    
+    const textSpins = ref([]);
+    const setTextSpin = el => {
+      textSpins.value.push(el);
+    };
+
     const projectList = reactive({data: {}})
     const fetchData = () => {
       fetch('data/projectList.json')
@@ -40,15 +48,22 @@ export default{
       });
     }
     onMounted(() => {
-      textSpin.value.innerHTML = textSpin.value.textContent.replace(/\S/g, '<span>$&</span>')
-      document.querySelectorAll('span').forEach((span, index) => {
-        span.style.setProperty('--delay', `${index *0.1}s`)
+
+      textSpins.value.forEach(el => {
+        // 這裡可以取得兩個 p 的 DOM
+        console.log(el);
       })
+
+      // textSpin.value.innerHTML = textSpin.value.textContent.replace(/\S/g, '<span>$&</span>')
+      // document.querySelectorAll('span').forEach((span, index) => {
+      //   span.style.setProperty('--delay', `${index *0.1}s`)
+      // })
       fetchData()
     })
     return{
-      textSpin,
-      projectList
+      // textSpin,
+      projectList,
+      setTextSpin
     }
   }
 }
