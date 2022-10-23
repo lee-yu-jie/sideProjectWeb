@@ -58,7 +58,7 @@ export default{
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Freehand&family=Fuzzy+Bubbles&family=Pacifico&family=Varela+Round&display=swap');
 body {
-  background-image: url("~@/assets/img/back2.jpeg");
+  background-image: url("../public/img/back2.jpeg");
   background-size: cover;
 }
 #app{
