@@ -1,23 +1,23 @@
 [
   {
     "name": "專案-Wubay",
-    "cover": "@/assets/img/projects/wubay.png"
+    "cover": "/img/projects/wubay.png"
   },
   {
     "name": "計算機",
-    "cover": "@/assets/img/projects/calculator.png",
+    "cover": "/img/projects/calculator.png",
     "skill": "Vue、CSS"
   },
   {
     "name": "香水首頁",
-    "cover": "@/assets/img/projects/perfume.png"
+    "cover": "/img/projects/perfume.png"
   },
   {
     "name": "時鐘",
-    "cover": "@/assets/img/projects/clock.png"
+    "cover": "/img/projects/clock.png"
   },
   {
     "name": "破格卡",
-    "cover": "@/assets/img/projects/breakcard.png"
+    "cover": "/img/projects/breakcard.png"
   }
 ]
