@@ -163,7 +163,7 @@ body {
         .content{
           position: relative;
           width: 350px;
-          height: 200px;
+          height: 380px;
           &:hover .cover{
           transform: rotateY(180deg);
           }
@@ -172,7 +172,7 @@ body {
           }
           @include pad{
             width: 500px;
-            height: 300px;
+            height: 350px;
           }
         }
         .card{
