@@ -3,7 +3,7 @@
     "name": "專案-Wubay[RWD]",
     "cover": "images/wubay.png",
     "skill": "Javascript、React、Tailwind、RubyonRails",
-    "introduce": "主要功能有即時通訊、搜尋功能、綠界金流、按讚留言與追蹤功能且具RWD設計，後端使用RoR，前端使用Stimulus和React",
+    "introduce": "主要功能有即時通訊、搜尋功能、綠界金流、按讚留言與追蹤功能且具RWD設計，後端使用RoR，前端使用Stimulus和React。",
     "responsibility": [
       "全站前端頁面功能與特效開發",
       "使用 Tailwind 切版與 RWD 設計", 
@@ -14,18 +14,26 @@
     "code": "https://github.com/lee-yu-jie/Project-wubay"
   },
   {
+    "name": "Vue-手工坊網站[RWD]",
+    "cover": "images/corsecart.png",
+    "skill": "Vue3、Vue-router、Vuex、Tailwind",
+    "introduce": "使用 Vue-router 實現SPA網站、Vuex 資料集中管理、Tailwind 版面排版及RWD、搭配animate.css互動特效完成手工坊網站。",
+    "web": "https://lee-yu-jie.github.io/Vue-CourseCart/",
+    "code": "https://github.com/lee-yu-jie/Vue-CourseCart"
+  },
+  {
     "name": "Vue-計算機",
     "cover": "images/calculator.png",
-    "skill": "Vue、CSS",
-    "introduce": "使用Vue搭配JS的cal()完成簡易簡約的暗色系計算機",
+    "skill": "Vue3、CSS",
+    "introduce": "使用Vue搭配JS的cal()完成簡易簡約的暗色系計算機。",
     "web": "https://lee-yu-jie.github.io/Vue-DarkCalculator/",
     "code": "https://github.com/lee-yu-jie/Vue-DarkCalculator"
   },
   {
     "name": "Vue-小狗購物車[RWD]",
     "cover": "images/dogcart.png",
-    "skill": "Vue、Bootstrap",
-    "introduce": "使用Vue搭配Bootstrap完成可以打折、任意修改購物車，RWD設計在手機也能輕鬆購買的頁面",
+    "skill": "Vue3、Bootstrap",
+    "introduce": "使用Vue搭配Bootstrap完成可以打折、任意修改購物車，RWD設計在手機也能輕鬆購買的頁面。",
     "web": "https://lee-yu-jie.github.io/Vue-dogCart/",
     "code": "https://github.com/lee-yu-jie/Vue-dogCart"
   },
@@ -33,7 +41,7 @@
     "name": "香水首頁",
     "cover": "images/perfume.png",
     "skill": "CSS、HTML、Javascript",
-    "introduce": "原生CSS刻一個香水首頁，並使用原生JS撰寫輪播片",
+    "introduce": "原生CSS刻一個香水首頁，並使用原生JS撰寫輪播片。",
     "web": "https://lee-yu-jie.github.io/perfume_rootpage/",
     "code": "https://github.com/lee-yu-jie/perfume_rootpage"
   },
@@ -41,7 +49,7 @@
     "name": "時鐘",
     "cover": "images/clock.png",
     "skill": "CSS、HTML、Javascript",
-    "introduce": "使用原生JS實現時鐘特效，並嘗試將鼠標更換樣式",
+    "introduce": "使用原生JS實現時鐘特效，並嘗試將鼠標更換樣式。",
     "web": "https://lee-yu-jie.github.io/Clock/",
     "code": "https://codepen.io/lee-yu-jie/pen/yLjqwQE"
   },
@@ -49,7 +57,7 @@
     "name": "破格卡",
     "cover": "images/breakcard.png",
     "skill": "CSS、HTML",
-    "introduce": "切版練習，嘗試用偽元素做半圓形邊框並搭配簡易動畫",
+    "introduce": "切版練習，嘗試用偽元素做半圓形邊框並搭配簡易動畫。",
     "web": "https://codepen.io/lee-yu-jie/pen/PoeaQqv"
   }
 ]
