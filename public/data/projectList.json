@@ -1,19 +1,5 @@
 [
   {
-    "name": "專案-Wubay[RWD]",
-    "cover": "images/wubay.png",
-    "skill": "Javascript、React、Tailwind、RubyonRails",
-    "introduce": "主要功能有即時通訊、搜尋功能、綠界金流、按讚留言與追蹤功能且具RWD設計，後端使用RoR，前端使用Stimulus和React。",
-    "responsibility": [
-      "全站前端頁面功能與特效開發",
-      "使用 Tailwind 切版與 RWD 設計", 
-      "使用 Axios 與後端串接API",
-      "React 撰寫搜尋功能頁面"
-    ],
-    "web": "https://wubaywubay.herokuapp.com/",
-    "code": "https://github.com/lee-yu-jie/Project-wubay"
-  },
-  {
     "name": "Vue-手工坊網站[RWD]",
     "cover": "images/corsecart.png",
     "skill": "Vue3、Vue-router、Vuex、Tailwind",
@@ -44,6 +30,20 @@
     "introduce": "原生CSS刻一個香水首頁，並使用原生JS撰寫輪播片。",
     "web": "https://lee-yu-jie.github.io/perfume_rootpage/",
     "code": "https://github.com/lee-yu-jie/perfume_rootpage"
+  },
+  {
+    "name": "專案-Wubay[RWD]",
+    "cover": "images/wubay.png",
+    "skill": "Javascript、React、Tailwind、RubyonRails",
+    "introduce": "主要功能有即時通訊、搜尋功能、綠界金流、按讚留言與追蹤功能且具RWD設計，後端使用RoR，前端使用Stimulus和React。",
+    "responsibility": [
+      "全站前端頁面功能與特效開發",
+      "使用 Tailwind 切版與 RWD 設計", 
+      "使用 Axios 與後端串接API",
+      "React 撰寫搜尋功能頁面"
+    ],
+    "web": "https://wubaywubay.herokuapp.com/",
+    "code": "https://github.com/lee-yu-jie/Project-wubay"
   },
   {
     "name": "時鐘",
