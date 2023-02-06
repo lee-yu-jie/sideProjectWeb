@@ -1,4 +1,12 @@
-[
+[ 
+  {
+    "name": "浪浪尋家所",
+    "cover": "images/adoptanimal.png",
+    "skill": "Vue3、Tailwind、Locomotive-scroll",
+    "introduce": "Css動畫搭配視差套件Locomotive-scroll，讓人有種平滑舒暢的感覺，建議使用電腦或平板橫向螢幕官網",
+    "web": "https://lee-yu-jie.github.io/Vue-adoptAnimal/",
+    "code": "https://github.com/lee-yu-jie/Vue-adoptAnimal"
+  },
   {
     "name": "Vue-手工坊網站[RWD]",
     "cover": "images/corsecart.png",
@@ -24,14 +32,6 @@
     "code": "https://github.com/lee-yu-jie/Vue-dogCart"
   },
   {
-    "name": "香水首頁",
-    "cover": "images/perfume.png",
-    "skill": "CSS、HTML、Javascript",
-    "introduce": "原生CSS刻一個香水首頁，並使用原生JS撰寫輪播片。",
-    "web": "https://lee-yu-jie.github.io/perfume_rootpage/",
-    "code": "https://github.com/lee-yu-jie/perfume_rootpage"
-  },
-  {
     "name": "專案-Wubay[RWD]",
     "cover": "images/wubay.png",
     "skill": "Javascript、React、Tailwind、RubyonRails",
@@ -44,6 +44,14 @@
     ],
     "web": "https://wubaywubay.herokuapp.com/",
     "code": "https://github.com/lee-yu-jie/Project-wubay"
+  },
+  {
+    "name": "香水首頁",
+    "cover": "images/perfume.png",
+    "skill": "CSS、HTML、Javascript",
+    "introduce": "原生CSS刻一個香水首頁，並使用原生JS撰寫輪播片。",
+    "web": "https://lee-yu-jie.github.io/perfume_rootpage/",
+    "code": "https://github.com/lee-yu-jie/perfume_rootpage"
   },
   {
     "name": "時鐘",

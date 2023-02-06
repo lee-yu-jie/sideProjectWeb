@@ -9,7 +9,7 @@
   </header>
   <main>
     <section class="project">
-      <div v-for="item in projectList.data" :key="item.name" class="projectCard">
+      <div v-for="item in filterData" :key="item.name" class="projectCard">
         <div class="title">
           <h2>{{item.name}}</h2>
         </div>
@@ -31,33 +31,47 @@
         </div>
       </div>
     </section>
+    <el-pagination 
+        layout="prev, pager, next" 
+        :total="projectList.data.length" 
+        :page-size="pageSize"
+        v-model:current-page="currentPage"
+        @current-change="setPage"
+        background
+      />
   </main>
 </template>
 
 <script>
-import { onMounted, ref, reactive } from 'vue'
+import { onMounted, ref, reactive, computed } from 'vue'
 export default{
   setup(){
-
-    // const textSpin = ref(null);
-    
+    let currentPage = ref(1)
+    let pageSize = ref(4)
     const textSpins = ref([]);
+    const projectList = reactive({data: []})
+
     const setTextSpin = el => {
       textSpins.value.push(el);
     };
 
-    const projectList = reactive({data: {}})
     const fetchData = () => {
       fetch('data/projectList.json')
       .then(d => d.json())
       .then(res => {
-        
         projectList.data = res
         console.log(projectList);
       });
     }
-    onMounted(() => {
 
+    const setPage = el => {
+      currentPage.value = el
+    }
+
+    let filterData = computed(() => {
+      return projectList.data.slice(pageSize.value * (currentPage.value - 1), pageSize.value * currentPage.value)
+    })
+    onMounted(() => {
       textSpins.value.forEach(el => {
         el.innerHTML = el.textContent.replace(/\S/g, '<span>$&</span>')
         document.querySelectorAll('span').forEach((span, index) => {
@@ -65,23 +79,22 @@ export default{
         })
       })
 
-      // textSpin.value.innerHTML = textSpin.value.textContent.replace(/\S/g, '<span>$&</span>')
-      // document.querySelectorAll('span').forEach((span, index) => {
-      //   span.style.setProperty('--delay', `${index *0.1}s`)
-      // })
       fetchData()
       const mouse = document.querySelector('.mouse');
       document.addEventListener("mousemove", function(e){
-        var oLeft = e.clientX;  
-        var oTop = e.clientY;          
+        let oLeft = e.clientX;  
+        let oTop = e.clientY;          
         mouse.style.left = oLeft + "px"; 
         mouse.style.top = oTop + "px"; 
       });
     })
     return{
-      // textSpin,
       projectList,
-      setTextSpin
+      setTextSpin,
+      currentPage,
+      setPage,
+      pageSize,
+      filterData
     }
   }
 }
@@ -134,6 +147,11 @@ body {
     }
   }
   main{
+    padding-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     .project{
       display: flex;
       flex-wrap: wrap;
@@ -217,6 +235,15 @@ body {
             margin-bottom: 1em;
           }
         }
+      }
+    }
+    .el-pagination{
+      background: transparent;
+      .btn-prev, .btn-next, .number{
+        background: rgb(177, 3, 3);
+        border-radius: 50%;
+        font-size: 20px;
+        font-family: 'Fuzzy Bubbles', cursive;
       }
     }
   }
